@@ -52,15 +52,9 @@
       animation: pulse 1.5s infinite;
     }
     @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-      }
-      100% {
-        transform: scale(1);
-      }
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
     }
     /* Toast Notification */
     .toast {
@@ -193,6 +187,7 @@
       border: 1px solid #ddd;
       border-radius: 10px;
       background: #f5f5f5;
+      transition: background 0.3s, border-color 0.3s;
     }
     .verification-code input:focus {
       outline: none;
@@ -371,7 +366,7 @@
     .chat-input button:hover {
       background: #a777e3;
     }
-    /* Private Chat Overrides */
+    /* Private Chat Overrides (if needed) */
     #private-chat-container .chat-wrapper {
       flex-direction: column;
     }
@@ -415,6 +410,22 @@
       }
       .chat-main {
         flex: 1;
+      }
+    }
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px;
+        margin: 10px;
+      }
+      .chat-sidebar h2, 
+      .user-list li .user-info h3 {
+        font-size: 14px;
+      }
+      .chat-header .profile div h3 {
+        font-size: 14px;
+      }
+      .chat-input input {
+        font-size: 12px;
       }
     }
   </style>
